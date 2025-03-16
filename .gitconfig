@@ -1,0 +1,15 @@
+[user]
+        email = lucas.colley8@gmail.com
+        name = Lucas Colley
+[alias]
+        s = switch
+        sub = submodule update --init
+        sc = switch -c
+        pum = pull upstream main
+        pom = push origin main
+        cm = commit -m
+        puo = push -u origin
+        fa = fetch --all
+        ca = commit --amend
+        b = branch
+
