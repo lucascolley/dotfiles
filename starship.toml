@@ -9,6 +9,7 @@ symbol = " "
 
 [conda]
 symbol = "🐚 "
+style = "bold yellow"
 
 [crystal]
 symbol = " "
@@ -155,7 +156,8 @@ symbol = " "
 [python]
 symbol = "🐍 "
 python_binary = "python"
-detect_files = []
+detect_extensions = []
+style = "bold green"
 
 [rlang]
 symbol = "󰟔 "
@@ -165,7 +167,7 @@ symbol = " "
 disabled = true
 
 [rust]
-symbol = "󱘗 "
+symbol = "🦀 "
 
 [scala]
 symbol = " "
