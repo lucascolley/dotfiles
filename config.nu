@@ -1,33 +1,38 @@
-mkdir ($nu.data-dir | path join "vendor/autoload")
+let autoload_dir = ($nu.data-dir | path join "vendor/autoload")
+mkdir $autoload_dir
+
+$env.config.show_banner = false
+$env.config.highlight_resolved_externals = true
+$env.config.history.file_format = "sqlite"
+
+$env.config.completions.external.completer = {|spans|
+  carapace $spans.0 nushell ...$spans | from json
+}
+
+$env.PATH = ($env.PATH | append /usr/local/bin)
+
 # add pixi global binaries to path
-$env.PATH = ($env.PATH | append /Users/lucascolley/.pixi/bin)
+$env.PATH = ($env.PATH | append ~/.pixi/bin)
+
 # set editor to nano
 $env.config.buffer_editor = "nano"
+
 # set up pixi completions
-pixi completion --shell nushell | save --force $"($nu.data-dir)/vendor/autoload/pixi-completions.nu"
+pixi completion --shell nushell | save --force $"($autoload_dir)/pixi-completions.nu"
+
+# set up rattler-build completions
+rattler-build completion --shell nushell | save --force $"($autoload_dir)/rattler-build-completions.nu"
+
 # set up starship
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
 # setup go-to-git script
 use ~/.config/nushell/scripts/gtg.nu *
+
 # aliases
+
 alias gpc = gh pr checkout
+alias gpl = gh pr list
 alias mm = micromamba
 alias sandbox = cd ~/sandbox
-# config.nu
-#
-# Installed by:
-# version = "0.105.1"
-#
-# This file is used to override default Nushell settings, define
-# (or import) custom commands, or run any other startup tasks.
-# See https://www.nushell.sh/book/configuration.html
-#
-# This file is loaded after env.nu and before login.nu
-#
-# You can open this file in your default editor using:
-# config nu
-#
-# See `help config nu` for more options
-#
-# You can remove these comments if you want or leave
-# them for future reference.
+alias repo = gh repo view --web
