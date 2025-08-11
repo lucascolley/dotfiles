@@ -1,18 +1,23 @@
+# setup autoload
 let autoload_dir = ($nu.data-dir | path join "vendor/autoload")
 mkdir $autoload_dir
 
+# nushell config
 $env.config.show_banner = false
 $env.config.highlight_resolved_externals = true
 $env.config.history.file_format = "sqlite"
-
 $env.config.completions.external.completer = {|spans|
   carapace $spans.0 nushell ...$spans | from json
 }
 
+# add system binaries to path
 $env.PATH = ($env.PATH | append /usr/local/bin)
 
 # add pixi global binaries to path
 $env.PATH = ($env.PATH | append ~/.pixi/bin)
+
+# add cargo binaries to path
+$env.PATH = ($env.PATH | append ~/.cargo/bin)
 
 # set editor to nano
 $env.config.buffer_editor = "nano"
@@ -30,7 +35,6 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 use ~/.config/nushell/scripts/gtg.nu *
 
 # aliases
-
 alias gpc = gh pr checkout
 alias gpl = gh pr list
 alias mm = micromamba
