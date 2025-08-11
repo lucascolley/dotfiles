@@ -19,8 +19,8 @@ $env.PATH = ($env.PATH | append ~/.pixi/bin)
 # add cargo binaries to path
 $env.PATH = ($env.PATH | append ~/.cargo/bin)
 
-# set editor to nano
-$env.config.buffer_editor = "nano"
+# set editor to micro
+$env.config.buffer_editor = "micro"
 
 # set up pixi completions
 pixi completion --shell nushell | save --force $"($autoload_dir)/pixi-completions.nu"
