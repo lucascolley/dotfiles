@@ -6,12 +6,10 @@ mkdir $autoload_dir
 $env.config.show_banner = false
 $env.config.highlight_resolved_externals = true
 $env.config.history.file_format = "sqlite"
-$env.config.completions.external.completer = {|spans|
-  carapace $spans.0 nushell ...$spans | from json
-}
 
 # add system binaries to path
 $env.PATH = ($env.PATH | append /usr/local/bin)
+$env.PATH = ($env.PATH | append /usr/sbin)
 
 # add pixi global binaries to path
 $env.PATH = ($env.PATH | append ~/.pixi/bin)
@@ -29,10 +27,13 @@ pixi completion --shell nushell | save --force $"($autoload_dir)/pixi-completion
 rattler-build completion --shell nushell | save --force $"($autoload_dir)/rattler-build-completions.nu"
 
 # set up starship
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+starship init nu | save --force $"($autoload_dir)/starship.nu"
 
 # setup go-to-git script
 use ~/.config/nushell/scripts/gtg.nu *
+
+# setup repoget script
+use ~/.config/nushell/scripts/repoget.nu *
 
 # aliases
 alias gpc = gh pr checkout
