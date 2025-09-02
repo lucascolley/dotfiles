@@ -17,16 +17,16 @@
 
 [credential "https://github.com"]
     helper =
-    helper = !/Users/lucascolley/.pixi/bin/gh auth git-credential
+    helper = !/~/.pixi/bin/gh auth git-credential
 [credential "https://gist.github.com"]
     helper =
-    helper = !/Users/lucascolley/.pixi/bin/gh auth git-credential
+    helper = !/~/.pixi/bin/gh auth git-credential
 [commit]
     gpgsign = true
 [tag]
     gpgSign = true
 [core]
-    excludesfile = /Users/lucascolley/.gitignore
+    excludesfile = /~/.gitignore
     editor = micro
 
 [ghq "https://github.com/scipy/scipy/"]
