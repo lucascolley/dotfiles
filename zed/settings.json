@@ -29,5 +29,20 @@
       "language_servers": ["basedpyright"]
     }
   },
-  "show_edit_predictions": false
+  "show_edit_predictions": false,
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".pixi/envs/lint/bin/python"
+        },
+        "basedpyright.analysis.exclude": ["*"]
+      }
+    }
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  }
 }
