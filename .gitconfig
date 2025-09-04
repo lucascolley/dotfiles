@@ -25,6 +25,7 @@
     gpgsign = true
 [tag]
     gpgSign = true
+
 [core]
     excludesfile = /~/.gitignore
     editor = micro
