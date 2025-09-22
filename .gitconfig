@@ -14,20 +14,20 @@
     fa = fetch --all
     ca = commit --amend
     b = branch
+    fpp = !git fa && git pum && git pom
 
 [credential "https://github.com"]
-    helper =
-    helper = !/~/.pixi/bin/gh auth git-credential
+    helper = !~/.pixi/envs/gh/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-    helper =
-    helper = !/~/.pixi/bin/gh auth git-credential
+    helper = !~/.pixi/envs/gh/bin/gh auth git-credential
+
 [commit]
     gpgsign = true
 [tag]
     gpgSign = true
 
 [core]
-    excludesfile = /~/.gitignore
+    excludesfile = ~/.gitignore
     editor = micro
 
 [ghq "https://github.com/scipy/scipy/"]
@@ -40,4 +40,4 @@ root = ~/ghq/github.com/rgommers/pixi-dev-scipystack/numpy/
 root = ~/ghq/github.com/rgommers/pixi-dev-scipystack/meson/
 
 [ghq "https://github.com/scikit-learn/scikit-learn"]
-root = ~/ghq/github.com/glemaitre/scikit-learn-workspace/src/scikit-learn/
+root = ~/ghq/github.com/glemaitre/python-stack/scikit-learn/scikit-learn

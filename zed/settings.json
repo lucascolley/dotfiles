@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "enabled": false
+  },
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "buffer_font_size": 15,
@@ -26,7 +29,7 @@
       "tab_size": 2
     },
     "Python": {
-      "language_servers": ["basedpyright"]
+      "language_servers": ["basedpyright", "!pyright"]
     }
   },
   "show_edit_predictions": false,
@@ -35,8 +38,7 @@
       "settings": {
         "python": {
           "pythonPath": ".pixi/envs/lint/bin/python"
-        },
-        "basedpyright.analysis.exclude": ["*"]
+        }
       }
     }
   },
@@ -44,5 +46,8 @@
     "after_delay": {
       "milliseconds": 1000
     }
+  },
+  "file_types": {
+    "Jinja2": ["j2"]
   }
 }
