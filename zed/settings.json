@@ -7,8 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "enabled": false
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
   },
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
@@ -27,27 +29,10 @@
   "languages": {
     "TOML": {
       "tab_size": 2
-    },
-    "Python": {
-      "language_servers": ["basedpyright", "!pyright"]
-    }
-  },
-  "show_edit_predictions": false,
-  "lsp": {
-    "basedpyright": {
-      "settings": {
-        "python": {
-          "pythonPath": ".pixi/envs/lint/bin/python"
-        }
-      }
-    }
-  },
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 1000
     }
   },
   "file_types": {
     "Jinja2": ["j2"]
-  }
+  },
+  "show_edit_predictions": false
 }
