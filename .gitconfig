@@ -14,24 +14,21 @@
     fa = fetch --all
     ca = commit --amend
     b = branch
-    fpp = !git fa && git pum && git pom
+	fpp = !git fa && git pum && git pom
 
 [credential "https://github.com"]
-    helper = !~/.pixi/envs/gh/bin/gh auth git-credential
+	helper = !~/.pixi/envs/gh/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-    helper = !~/.pixi/envs/gh/bin/gh auth git-credential
+	helper = !~/.pixi/envs/gh/bin/gh auth git-credential
 
 [commit]
-    gpgsign = true
+    gpgsign = false
 [tag]
     gpgSign = true
 
 [core]
     excludesfile = ~/.gitignore
     editor = micro
-
-[ghq "https://github.com/scipy/scipy/"]
-root = ~/ghq/github.com/rgommers/pixi-dev-scipystack/scipy/
 
 [ghq "https://github.com/numpy/numpy/"]
 root = ~/ghq/github.com/rgommers/pixi-dev-scipystack/numpy/
