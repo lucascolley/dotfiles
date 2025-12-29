@@ -22,7 +22,7 @@
 	helper = !~/.pixi/envs/gh/bin/gh auth git-credential
 
 [commit]
-    gpgsign = false
+    gpgsign = true
 [tag]
     gpgSign = true
 
