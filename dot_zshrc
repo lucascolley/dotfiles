@@ -1,0 +1,3 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export PATH=/Users/lucascolley/.pixi/bin:$PATH
+export EDITOR=micro
