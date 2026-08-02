@@ -91,3 +91,8 @@ exposed = { chezmoi = "chezmoi" }
 channels = ["conda-forge"]
 dependencies = { rattler-build = "*" }
 exposed = { rattler-build = "rattler-build" }
+
+[envs.pinentry]
+channels = ["conda-forge"]
+dependencies = { pinentry = "*" }
+exposed = { pinentry = "pinentry", pinentry-curses = "pinentry-curses", pinentry-tty = "pinentry-tty" }

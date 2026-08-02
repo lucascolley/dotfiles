@@ -10,6 +10,9 @@ $env.config.history.file_format = "sqlite"
 # add pixi global binaries to path
 $env.PATH = ($env.PATH | append ~/.pixi/bin)
 
+# gpg
+$env.GPG_TTY = (tty)
+
 # editor
 $env.config.buffer_editor = "micro"
 
