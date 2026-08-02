@@ -1,0 +1,93 @@
+version = 1
+
+[envs.gh]
+channels = ["conda-forge"]
+dependencies = { gh = "*" }
+exposed = { gh = "gh" }
+
+[envs.git]
+channels = ["conda-forge"]
+dependencies = { git = "*" }
+exposed = { git = "git", git-cvsserver = "git-cvsserver", git-receive-pack = "git-receive-pack", git-shell = "git-shell", git-upload-archive = "git-upload-archive", git-upload-pack = "git-upload-pack", gitk = "gitk", scalar = "scalar" }
+
+[envs.ripgrep]
+channels = ["conda-forge"]
+dependencies = { ripgrep = "*" }
+exposed = { rg = "rg" }
+
+[envs.pre-commit]
+channels = ["conda-forge"]
+dependencies = { pre-commit = "*" }
+exposed = { pre-commit = "pre-commit" }
+
+[envs.starship]
+channels = ["conda-forge"]
+dependencies = { starship = "*" }
+exposed = { starship = "starship" }
+
+[envs.uv]
+channels = ["conda-forge"]
+dependencies = { uv = "*" }
+exposed = { uv = "uv", uvx = "uvx" }
+
+[envs.nushell]
+channels = ["conda-forge"]
+dependencies = { nushell = "*" }
+exposed = { nu = "nu", nu_plugin_custom_values = "nu_plugin_custom_values", nu_plugin_example = "nu_plugin_example", nu_plugin_formats = "nu_plugin_formats", nu_plugin_gstat = "nu_plugin_gstat", nu_plugin_inc = "nu_plugin_inc", nu_plugin_polars = "nu_plugin_polars", nu_plugin_query = "nu_plugin_query", nu_plugin_stress_internals = "nu_plugin_stress_internals" }
+
+[envs.go-ghq]
+channels = ["conda-forge"]
+dependencies = { go-ghq = "*" }
+exposed = { ghq = "ghq" }
+
+[envs.fzf]
+channels = ["conda-forge"]
+dependencies = { fzf = "*" }
+exposed = { fzf = "fzf" }
+
+[envs.bat]
+channels = ["conda-forge"]
+dependencies = { bat = "*" }
+exposed = { bat = "bat" }
+
+[envs.micro]
+channels = ["conda-forge"]
+dependencies = { micro = "*" }
+exposed = { micro = "micro" }
+
+[envs.zed]
+channels = ["conda-forge"]
+dependencies = { zed = "*" }
+exposed = { zed = "zed" }
+shortcuts = ["zed"]
+
+[envs.pixi-browse]
+channels = ["conda-forge"]
+dependencies = { pixi-browse = "*" }
+exposed = { pixi-browse = "pixi-browse" }
+
+[envs.pixi-gui]
+channels = ["https://prefix.dev/conda-forge", "https://prefix.dev/pixi-gui"]
+dependencies = { pixi-gui = "*" }
+exposed = { pixi-gui = "pixi-gui" }
+shortcuts = ["pixi-gui"]
+
+[envs.carapace]
+channels = ["conda-forge"]
+dependencies = { carapace = "*" }
+exposed = { carapace = "carapace" }
+
+[envs.glab]
+channels = ["conda-forge"]
+dependencies = { glab = "*" }
+exposed = { glab = "glab" }
+
+[envs.chezmoi]
+channels = ["conda-forge"]
+dependencies = { chezmoi = "*" }
+exposed = { chezmoi = "chezmoi" }
+
+[envs.rattler-build]
+channels = ["conda-forge"]
+dependencies = { rattler-build = "*" }
+exposed = { rattler-build = "rattler-build" }
