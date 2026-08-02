@@ -1,3 +1,8 @@
 default-cache-ttl 604800
 max-cache-ttl 604800
+{{- if eq .chezmoi.os "linux" }}
 pinentry-program /home/lucas/.pixi/bin/pinentry
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
+pinentry-program /Users/lucascolley/.pixi/bin/pinentry
+{{- end }}
