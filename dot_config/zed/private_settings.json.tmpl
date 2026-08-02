@@ -52,7 +52,12 @@
   "terminal": {
     "detect_venv": "off",
     "shell": {
+{{- if eq .chezmoi.os "linux" }}
+      "program": "/home/lucas/.pixi/envs/nushell/bin/nu"
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
       "program": "/Users/lucascolley/.pixi/envs/nushell/bin/nu"
+{{- end }}
     }
   },
   "languages": {
