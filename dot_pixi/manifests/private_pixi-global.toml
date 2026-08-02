@@ -67,7 +67,7 @@ dependencies = { pixi-browse = "*" }
 exposed = { pixi-browse = "pixi-browse" }
 
 [envs.pixi-gui]
-channels = ["https://prefix.dev/conda-forge", "https://prefix.dev/pixi-gui"]
+channels = ["https://prefix.dev/pixi-gui"]
 dependencies = { pixi-gui = "*" }
 exposed = { pixi-gui = "pixi-gui" }
 shortcuts = ["pixi-gui"]
