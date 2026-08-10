@@ -96,3 +96,13 @@ exposed = { rattler-build = "rattler-build" }
 channels = ["conda-forge"]
 dependencies = { pinentry = "*" }
 exposed = { pinentry = "pinentry", pinentry-curses = "pinentry-curses", pinentry-tty = "pinentry-tty" }
+
+[envs.esbonio]
+channels = ["conda-forge"]
+dependencies = { esbonio = "*" }
+exposed = { esbonio = "esbonio" }
+
+[envs.prek]
+channels = ["conda-forge"]
+dependencies = { prek = "*" }
+exposed = { prek = "prek" }
