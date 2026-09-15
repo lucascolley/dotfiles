@@ -106,3 +106,32 @@ exposed = { esbonio = "esbonio" }
 channels = ["conda-forge"]
 dependencies = { prek = "*" }
 exposed = { prek = "prek" }
+
+[envs.pixi-skills]
+channels = ["conda-forge"]
+dependencies = { pixi-skills = "*" }
+exposed = { pixi-skills = "pixi-skills" }
+
+[envs.agent-skill-rattler-build]
+channels = ["https://prefix.dev/skill-forge"]
+dependencies = { agent-skill-rattler-build = "*" }
+
+[envs.agent-skill-conda-forge]
+channels = ["https://prefix.dev/skill-forge"]
+dependencies = { agent-skill-conda-forge = "*" }
+
+[envs.fastpotify]
+channels = ["conda-forge"]
+dependencies = { fastpotify = "*" }
+exposed = { fastpotify = "fastpotify" }
+shortcuts = ["fastpotify"]
+
+[envs.nodejs]
+channels = ["conda-forge"]
+dependencies = { nodejs = "*" }
+exposed = { node = "node", npm = "npm", npx = "npx" }
+
+[envs.brush]
+channels = ["conda-forge"]
+dependencies = { brush = "*" }
+exposed = { brush = "brush" }

@@ -31,6 +31,9 @@ rattler-build completion --shell nushell | save --force $"($autoload_dir)/rattle
 # add cargo binaries to path
 $env.PATH = ($env.PATH | append ~/.cargo/bin)
 
+# add nodejs binaries to path
+$env.PATH = ($env.PATH | append ~/.pixi/envs/nodejs/bin)
+
 # add system binaries to path
 $env.PATH = ($env.PATH | append /usr/local/bin)
 $env.PATH = ($env.PATH | append /usr/sbin)
